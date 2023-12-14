@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <style>
+
+        #topheader
+        {
+            background-color: #0077b5;
+            color : white ;
+           
+     justify-content: space-between;
+     
+        }
+    </style>
+      <div id="topheader">
+        <center> <h1> Nutrition  Shop </h1></center>
+        
+     </div>
+    
+</head>
+<body>
+
+<h1>Modifier le produit </h1>
+
+    <form   action="modifier.produit_action.php" method="POST">
+        <label for="idproteine">idproteine</label>
+        <input type="text" name="idproteine" id="name"><br>
+ 
+        <label for="Nom">Nom</label>
+        <input type="text" name="Nom" id="name"><br>
+
+        <label for="Description">Description</label>
+        <input type="text" name="Description" id="name"><br>
+
+        <label for="Prix">Prix</label>
+        <input type="text" name="Prix" id="name"><br>
+
+        <button type="submit" class="btn btn-success"  value= "modifier">Modifier</button>
+        <button type="reset" class="btn btn-danger">Anuuler</button>
+    </form>
+</body>
+</html>

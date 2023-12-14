@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proteine nutrition</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #topheader {
+            background-color: #000000;
+            color: white
+        }
+
+        .button {
+            text-align: right;
+            margin-right: 50px;
+            margin-bottom: 10px;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .container>div {
+            flex: 1;
+            text-align: center;
+
+            margin: 10px;
+
+        }
+
+        .USER {
+            margin-right: 20px;
+            float: right;
+            margin-top: 55px;
+            margin-left: 49px;
+            padding-right: 90px;
+
+            text-align: right;
+
+        }
+
+
+
+
+        .PANIER {
+            margin-right: 80px;
+            float: right;
+            margin-top: 55px;
+            margin-left: 40px;
+            padding-right: 10px;
+            text-align: right;
+
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-left: 9%;
+            margin-top: 70px;
+        }
+
+        .product {
+            flex: 1 0 calc(25% - 10px);
+            margin-bottom: 20px;
+            margin-right: -20px;
+
+
+
+        }
+
+        p {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .add-to-cart-button {
+            display: none;
+        }
+
+
+        .product:hover .add-to-cart-button {
+            display: block;
+            background-color: rgb(50, 205, 50);
+            color: white;
+            border: none;
+            margin-right: 12px;
+            margin-left: 10%;
+        }
+
+        .option {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            cursor: default;
+        }
+
+        .liste-cachee {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .mot:hover .liste-cachee {
+            display: block;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        .mot {
+            display: inline-block;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .Objectif:hover .liste-cachee-img {
+            display: block;
+            /* Afficher la liste lorsqu'on survole le conteneur "Objectif" */
+        }
+
+        .Objectif {
+            display: inline-block;
+            margin: 10px;
+            text-align: left;
+            position: relative;
+        }
+
+        .mot1 {
+            display: inline-block;
+            vertical-align: top;
+            white-space: nowrap;
+        }
+
+
+        /* Empêche le retour à la ligne automatique */
+
+
+        .mot1:hover .liste-cachee-img {
+            display: block;
+        }
+
+        .liste-cachee-img {
+            list-style: none;
+            padding: 0;
+            white-space: nowrap;
+            /* Empêche le retour à la ligne automatique */
+            display: none;
+            /* Masquer la liste par défaut */
+            position: 20px;
+            top: 100%;
+            /* Positionner la liste juste en dessous du mot "Objectif" */
+            left: 0;
+        }
+
+        .liste-cachee-img li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="topheader">
+
+        <img src="http://localhost/projet/img/logo.png " width="300px">
+        <div class="USER">
+            <a href="login.register.php"> <img src="http://localhost/projet/img/user.png"> </a>
+
+
+            <img src="http://localhost/projet/img/paniere.png" width="28px">
+
+        </div>
+
+
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <section class="section">
+        <div class="container">
+            <div class="Livrasion">
+                <img src="http://localhost/projet/img/livraison.png" width="110px" height="110px"> <br>
+                <span class="element_img">LIVRAISON RAPIDE 24H / 72H</span>
+            </div>
+            <div class="PAIEMENT">
+                <img src="http://localhost/projet/img/paiement.png" width="110px" height="110px"> <br>
+                <span class="element_img">PAIEMENT SECURISE</span>
+            </div>
+            <div class="PRIX">
+
+                <img src="http://localhost/projet/img/prix.png" width="110px" height="110px"> <br>
+                <span class="element_img">PRIX REDUITS TOUTE L ANNEE</span>
+            </div>
+            <div class="Livrasion2">
+                <img src="http://localhost/projet/img/offert.png" width="110px" height="110px"> <br>
+
+                <span class="element_img">LIVRAISON GRATUITE A PARTIR DE 69,99TND</span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="mot">
+            Proteine
+            <ul class="liste-cachee">
+                <li> <a href="">Mass Musculaire </a></li>
+                <li> <a href="">Seche defintion</a></li>
+                <li> <a href="">Perdre de poids </a></li>
+                <li> <a href="">Pre_Workout </a></li>
+            </ul>
+        </div>
+
+        <div class="mot">
+            Creatine
+            <ul class="liste-cachee">
+                <li> <a href="">Creatine monohydrate</a></li>
+                <li> <a href="">Creatine anhydre </a></li>
+                <li> <a href="">Creatine citrate </a></li>
+                <li> <a href="">Gluconate de creatine </a></li>
+                <li> <a href="">Creatine micronisee</a></li>
+            </ul>
+        </div>
+
+
+        <div class="mot">
+            Vetements
+            <ul class="liste-cachee">
+                <li> <a href=""></a></li>
+                <li> <a href=""></a></li>
+                <li> <a href=""></a></li>
+            </ul>
+        </div>
+        <div class="Objectif">
+            <div class="mot1">
+                Objectif
+                <ul class="liste-cachee-img">
+                    <li> <img src="http://localhost/projet/img/prise-de-masse-dravel.jpg" href=""></li>
+                    <li> <img src="http://localhost/projet/img/seche-dravel.jpg" href=""></li>
+                    <li> <img src="http://localhost/projet/img/perte-de-poids-dravel.jpg" href=""></li>
+                    <li> <img src="http://localhost/projet/img/endurance-dravel-1.jpg" href=""></li>
+                    <li> <img src=" http://localhost/projet/img/prise-de-muscle-dravel.jpg" href=""></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </section>
+    <br><br>
+
+
+    </nav>
+    <!--    <input type="image" id="image" alt="Login" src="http://localhost/projet/img/whey.jpg" />
+     <input type="hidden" name="nom" value="whey isolate proteine "> 
+
+
+     <input type="image" id="image" alt="Login" src="http://localhost/projet/img/whey.jpg" />
+     <input type="hidden" name="nom" value="whey isolate proteine ">whey isolate proteine 
+
+
+
+     <input type="image" id="image" alt="Login" src="http://localhost/projet/img/whey.jpg" />
+     <input type="hidden" name="nom" value="whey isolate proteine ">whey isolate proteine 
+
+
+     <input type="image" id="image" alt="Login" src="http://localhost/projet/img/whey.jpg" />
+     <input type="hidden" name="nom" value="whey isolate proteine ">whey isolate proteine  -->
+    <div class="product-container">
+        <div class="product">
+            <img src="http://localhost/projet/img/whey.jpg" width="270px">
+
+
+            <input type="hidden" name="prix" value="19.99">
+            <button class="add-to-cart-button" onclick="addToCart('product1')">Ajouter au panier</button>
+
+        </div>
+        <div class="product">
+            <img src="http://localhost/projet/img/whey%20isolate.jpg" width="270px">
+            <p>Clear whey isolate </p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="http://localhost/projet/img/creatine.jpg" width="270px">
+            <p> Creatine Monohadrate </p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+
+        <div class="product">
+            <img src="http://localhost/projet/img/peanut.jpg" width="270px">
+            <p>Peanut</p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+
+        <div class="product">
+            <img src="http://localhost/projet/img/BCAA.jpg" width="270px">
+            <p name="">BCAA</p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="http://localhost/projet/img/alpha%20pre%20work-out.jpg" width="270px">
+            <p>Alpha pre workout</p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="http://localhost/projet/img/Flocons%20d'Avoine%20Sans%20Gluten.jpg" width="270px">
+            <p>Flocons d'Avoine Sans Gluten </p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="http://localhost/projet/img/Qulatamine.jpg" width="270px">
+            <p>Glutamine</p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+        <!-- la troisieme ligne-->
+        <div class="product">
+            <img src="http://localhost/projet/img/deborateur%20pour%20homme.jpg" width="270px">
+            <p>Debardeur d'entrainement MP pour hommes -<br> Noir </p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="http://localhost/projet/img/pour%20femme.jpg" width="270px">
+            <p>Legging taille haute MP Curve pour femmes -<br> Noir</p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="http://localhost/projet/img/t-shirt%20pour%20homme.jpg" width="270px">
+            <p>T-shirt pour homme</p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="http://localhost/projet/img/sac.jpg" width="270px">
+            <p>Sac</p>
+            <button class="add-to-cart-button">Ajouter au panier</button>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+    <script>
+        function addToCart(productId) {
+            // Faites une requête AJAX ou redirigez vers une page PHP qui gère l'ajout au panier
+            // Dans cet exemple, nous utilisons une requête AJAX pour appeler un script PHP qui ajoutera le produit à la session
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "add_to_cart.php?product=" + productId, true);
+            xhr.send();
+        }
+    </script>
+    <script>
+
+
+
+        function showAddToCartButton(product) {
+
+            product.querySelector('.add-to-cart-button').style.display = 'block';
+        }
+
+        function hideAddToCartButton(product) {
+            product.querySelector('.add-to-cart-button').style.display = 'none';
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+<div class="container my-5">
+
+    <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
+        <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
+            <div class="me-5">
+                <span>Rejoignez-nous sur les reseaux sociaux </span>
+            </div>
+
+            <div>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold">Proteine nutrition</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            Chez Proteine, nous croyons fermement en l'impact positif que la nutrition sportive
+                            peut avoir sur la vie quotidienne. Notre histoire commence avec la passion partagee pour le
+                            bien-etre et la recherche constante de moyens pour aider chacun a atteindre ses objectifs de
+                            fitness.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Produits</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <p class="text-dark">Proteine nutrition</p>
+                        </p>
+                        <p>
+                            <p  class="text-dark">Accesoire sportive</p>
+                        </p>
+                        <p>
+                            <p  class="text-dark">Vetements sportifs </p>
+                        </p>
+                        <p>
+                            <p  class="text-dark"> Meters Fitness et musculation</p>
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <h6 class="text-uppercase fw-bold">Liens utiles</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="#!" class="text-dark">Bechir Hadiden</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-dark">Bechir Bussines</a>
+                        </p>
+                        
+                        <p>
+                            <a href="#!" class="text-dark">Help</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><i class="fas fa-home mr-3"></i> Nabeul , Center Ville</p>
+                        <p><i class="fas fa-envelope mr-3"></i> bechirhadiden8@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 90 11 70 54</p>
+                        <p><i class="fas fa-print mr-3"></i> + 96 79 65 35</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            
+            <a class="text-dark" href="https://mdbootstrap.com/">www.Proteine Nutrition.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</div>
+<!-- End of .container -->
+
+
+
+
+
+<script>
+    function addToCart(productId) {
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "add_to_cart.php?product=" + productId, true);
+        xhr.send();
+    }
+</script>
+
+</html>
